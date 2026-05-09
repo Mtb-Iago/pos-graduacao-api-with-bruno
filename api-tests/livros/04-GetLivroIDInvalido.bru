@@ -1,0 +1,14 @@
+meta {
+  name: Buscar ID como String
+  type: http
+  seq: 4
+}
+get {
+  url: http://localhost:8000/livros/abc-teste
+}
+tests {
+  test("Deve retornar 400 para ID inválido (string)", function() {
+    expect(res.getStatus()).to.equal(400);
+    expect(res.getBody()).to.contain("ID inválido");
+  });
+}

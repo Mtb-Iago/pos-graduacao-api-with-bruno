@@ -1,0 +1,17 @@
+meta {
+  name: Remover Favorito
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8000/favoritos/3
+  body: none
+}
+
+tests {
+  test("Deve remover com sucesso", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody()).to.contain("removido");
+  });
+}

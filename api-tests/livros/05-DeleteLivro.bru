@@ -1,0 +1,13 @@
+meta {
+  name: Eliminar Livro de Teste
+  type: http
+  seq: 5
+}
+delete {
+  url: http://localhost:8000/livros/10
+}
+tests {
+  test("Deve eliminar o livro e limpar o JSON", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+}

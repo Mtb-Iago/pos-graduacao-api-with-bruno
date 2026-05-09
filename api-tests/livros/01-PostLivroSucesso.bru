@@ -1,0 +1,20 @@
+meta {
+  name: Criar Livro
+  type: http
+  seq: 1
+}
+post {
+  url: http://localhost:8000/livros
+  body: json
+}
+body:json {
+  {
+    "id": "10",
+    "nome": "Livro de Teste Automatizado"
+  }
+}
+tests {
+  test("Deve criar um livro com sucesso", function() {
+    expect(res.getStatus()).to.equal(201);
+  });
+}

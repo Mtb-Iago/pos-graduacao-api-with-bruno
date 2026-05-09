@@ -1,0 +1,24 @@
+{
+  "name": "aprendendo-node-ifba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon app.js",
+    "test:api": "clear && cd api-tests && bru run --delay 300"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@usebruno/cli": "^3.3.0",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "react": "^19.2.6"
+  },
+  "devDependencies": {
+    "jest": "^30.4.1"
+  }
+}

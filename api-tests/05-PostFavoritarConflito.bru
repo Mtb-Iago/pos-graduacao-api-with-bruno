@@ -1,0 +1,18 @@
+meta {
+  name: Favoritar Duplicado
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8000/favoritos/3
+  body: none
+}
+
+tests {
+  test("Deve retornar erro de conflito", function() {
+    // Como seu service joga um erro genérico, deve vir 500
+    expect(res.getStatus()).to.equal(500);
+    expect(res.getBody()).to.contain("já está nos seus favoritos");
+  });
+}
